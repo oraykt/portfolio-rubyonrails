@@ -1,4 +1,6 @@
-#Oray Kurt Portfolio Applicatioc
+#Oray Kurt Portfolio Application
+www.oraykurt.herokuapp.com <br />
+It will be released on www.oraykurt.com soon
 
 > This is a Ruby on Rails 5 application
 
