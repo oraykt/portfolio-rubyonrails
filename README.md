@@ -1,4 +1,4 @@
-#Oray Kurt Portfolio Application
+# Oray Kurt Portfolio Application
 www.oraykurt.herokuapp.com <br />
 It will be released on www.oraykurt.com soon
 
