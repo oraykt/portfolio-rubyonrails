@@ -1,5 +1,5 @@
 # Oray Kurt Portfolio Application
-[oraykurt.herokuapp.com](oraykurt.herokuapp.com) <br />
+http://oraykurt.herokuapp.com/ <br />
 It will be released on www.oraykurt.com soon
 
 > This is a Ruby on Rails 5 application
