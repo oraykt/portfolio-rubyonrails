@@ -8,6 +8,11 @@
         <p><%= @portfolio_item.subtitle %></p>
         <p><%= @portfolio_item.body %></p>
         <%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+
+        <h2>Technologies Used:</h2>
+        <% @portfolio_item.technologies.each do |tech| %>
+        <p><%= tech.name %></p>
+        <% end %>
       </li>
   </ul>
 </div>
