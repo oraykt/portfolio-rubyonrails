@@ -1,6 +1,8 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
-
+  accepts_nested_attributes_for :technologies,
+                                reject_if: ->(attrs) { attrs['name'].blank? }
+                              # reject_if: lambda { |attrs| attrs['name'].blank?}
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
@@ -10,7 +12,7 @@ class Portfolio < ApplicationRecord
   end
 
   # Portfolio.custom_query_2
-  scope :custom_query_2, ->{
+  scope :custom_query_2, lambda {
     where(subtitle: 'Ruby on Rails')
   }
 
