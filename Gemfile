@@ -39,6 +39,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.4.0'
 
+# https://github.com/heartcombo/devise
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
