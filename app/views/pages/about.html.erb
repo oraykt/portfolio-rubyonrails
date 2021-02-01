@@ -1,2 +1,4 @@
 <h1>Pages#about</h1>
 <p>Find me in app/views/pages/about.html.erb</p>
+
+<%= link_to "Back", request.referer.present? ? request.referer : root_path %>

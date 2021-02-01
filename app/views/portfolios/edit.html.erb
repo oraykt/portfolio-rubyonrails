@@ -1,3 +1,4 @@
+<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
 <h1>Edit the Portfolio Item</h1>
 
 <%= form_for(@portfolio_item) do |f| %>

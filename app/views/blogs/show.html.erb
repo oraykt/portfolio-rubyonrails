@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
+
 <p>
   <strong>Title:</strong>
   <%= @blog.title %>

@@ -1,6 +1,11 @@
-<h1>Portfolio Items</h1>
+<p id="notice"><%= notice %></p>
 
+<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
 <%= link_to "Create new Portfolio", new_portfolio_path %>
+
+<hr />
+
+<h1>Portfolio Items</h1>
 
 <div>
   <ul>
