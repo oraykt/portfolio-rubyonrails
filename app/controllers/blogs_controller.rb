@@ -2,13 +2,11 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
 
   # GET /blogs
-  # GET /blogs.json
   def index
     @blogs = Blog.all
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
+  # GET /blogs/:id
   def show; end
 
   # GET /blogs/new
@@ -16,14 +14,12 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
+  # GET /blogs/:id/edit
   def edit; end
 
   # POST /blogs
-  # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Your post is now live!' }
@@ -33,8 +29,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
+  # PATCH/PUT /blogs/:id
   def update
     respond_to do |format|
       if @blog.update(blog_params)
@@ -45,8 +40,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
+  # DELETE /blogs/:id
   def destroy
     @blog.destroy
     respond_to do |format|
@@ -54,6 +48,7 @@ class BlogsController < ApplicationController
     end
   end
 
+  # GET /blogs/:id/toggle_status
   def toggle_status
     if @blog.draft?
       @blog.published!
@@ -65,13 +60,14 @@ class BlogsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_blog
     @blog = Blog.friendly.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(
+      :title,
+      :body
+    )
   end
 end

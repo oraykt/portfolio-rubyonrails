@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
+  # GET /
   def home
     @skills = Skill.all
   end
 
-  def about
-  end
+  # GET /about-me
+  def about; end
 
-  def contact
-  end
+  # GET /contact
+  def contact; end
 end
