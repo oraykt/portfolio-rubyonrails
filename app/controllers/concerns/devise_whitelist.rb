@@ -6,10 +6,9 @@ module DeviseWhitelist
                   if: :devise_controller?
   end
 
-
   def configure_permitted_parameters
     # devise knows sign_up and account_update keywords on usage.
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[nickname first_name last_name])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[nickname first_name last_name])
   end
 end
