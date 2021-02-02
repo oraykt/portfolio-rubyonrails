@@ -3,21 +3,11 @@
 <%= link_to "Back", request.referer.present? ? request.referer : root_path %>
 <%= link_to "Create new Portfolio", new_portfolio_path %>
 
-<hr />
 
 <h1>Portfolio Items</h1>
 
 <div>
   <ul>
-    <% @portfolio_items.each do |portfolio_item| %>
-      <li>
-        <%= link_to "Edit the Portfolio", edit_portfolio_path(portfolio_item.id) %>
-        <%= link_to "Delete the Portfolio", portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></p>
-        <p><%= portfolio_item.subtitle %></p>
-        <p><%= portfolio_item.body %></p>
-        <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-      </li>
-    <% end %>
+    <%= render @portfolio_items %>
   </ul>
 </div>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
                sign_up: 'register'
              }
   resources :portfolios, except: [:show]
+  # get 'custom-endpoint', to: 'controller#custom_action'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
 

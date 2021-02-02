@@ -1,27 +1,31 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy toggle_status]
+  layout 'portfolio'
 
   # GET /portfolios
   def index
     @portfolio_items = Portfolio.all
+    @page_title = 'Oray Kurt | Portfolios'
   end
 
   # GET /portfolio/:id
-  def show; end
+  def show
+    @page_title = @portfolio.title
+  end
 
   # GET /portfolios/new
   def new
-    @portfolio_item = Portfolio.new
+    @portfolio = Portfolio.new
     # hard coded style
     # TODO refactor
-    3.times { @portfolio_item.technologies.build }
+    3.times { @portfolio.technologies.build }
   end
 
   # POST /portfolios
   def create
-    @portfolio_item = Portfolio.new(portfolio_params)
+    @portfolio = Portfolio.new(portfolio_params)
     respond_to do |format|
-      if @portfolio_item.save
+      if @portfolio.save
         format.html { redirect_to portfolios_path, notice: 'Portfolio saved successfully' }
       else
         format.html { render :new }
@@ -35,7 +39,7 @@ class PortfoliosController < ApplicationController
   # PUT /portfolios/:id
   def update
     respond_to do |format|
-      if @portfolio_item.update(portfolio_params)
+      if @portfolio.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
       else
         format.html { render :edit }
@@ -45,17 +49,16 @@ class PortfoliosController < ApplicationController
 
   # DELETE /portfolios/:id
   def destroy
-    @portfolio_item.destroy
+    @portfolio.destroy
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'The record was removed.' }
     end
-
   end
 
   private
 
   def set_portfolio
-    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio = Portfolio.find(params[:id])
   end
 
   def portfolio_params
