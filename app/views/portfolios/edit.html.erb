@@ -1,4 +1,4 @@
 <%= link_to "Back", request.referer.present? ? request.referer : root_path %>
 <h1>Edit the Portfolio Item</h1>
 
-<%= render 'form', portfolio v: @portfolio_item %>
+<%= render 'form', portfolio: @portfolio_item %>
