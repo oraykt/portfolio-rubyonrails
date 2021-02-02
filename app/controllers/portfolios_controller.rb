@@ -1,10 +1,11 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy toggle_status]
+  layout 'portfolio'
 
   # GET /portfolios
   def index
     @portfolio_items = Portfolio.all
-    @page_title = "Oray Kurt | Portfolios"
+    @page_title = 'Oray Kurt | Portfolios'
   end
 
   # GET /portfolio/:id
@@ -52,7 +53,6 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'The record was removed.' }
     end
-
   end
 
   private
