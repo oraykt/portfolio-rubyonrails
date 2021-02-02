@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OrayKurtPortfolio</title>
+    <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta name="keyword" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,13 +14,32 @@
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <% if current_user.is_a?(User) %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Login", new_user_session_path %>
-    <%= link_to "Register", new_user_registration_path %>
-
-  <% end %>
+  <div class="nav">
+    <div class="nav-item">
+      <% if current_user.is_a?(User) %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path %>
+        <%= link_to "Register", new_user_registration_path %>
+      <% end %>
+    </div>
+    <hr/>
+    <div class="nav-item">
+      <%= link_to "Home", root_path %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "About", about_me_path %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "Contact", contact_path %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "My Portfolios", portfolios_path %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "My Blogs", blogs_path %>
+    </div>
+  </div>
   <%= yield %>
 
   <% if session[:source] %>
