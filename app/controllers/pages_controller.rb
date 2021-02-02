@@ -5,8 +5,12 @@ class PagesController < ApplicationController
   end
 
   # GET /about-me
-  def about; end
+  def about
+    @page_title = "Oray Kurt | About"
+  end
 
   # GET /contact
-  def contact; end
+  def contact
+    @page_title = "Oray Kurt | Contact"
+  end
 end
