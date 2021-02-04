@@ -50,7 +50,7 @@ gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
 
 # https://github.com/oraykt/oraykurt
-gem 'oraykurt', git: 'https://github.com/oraykt/oraykurt'
+gem 'oraykurt', '~> 0.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
