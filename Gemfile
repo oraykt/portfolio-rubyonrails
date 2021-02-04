@@ -50,7 +50,7 @@ gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
 
 # https://github.com/oraykt/oraykurt
-gem 'oraykurt', '~> 0.1.0'
+gem 'oraykurt', '~> 0.1.1'
 
 # https://github.com/elorest/petergate
 gem 'petergate', '~> 2.0', '>= 2.0.1'
