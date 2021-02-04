@@ -15,19 +15,19 @@
   </head>
 
   <body>
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-        <%= render "shared/application_nav" %>
-        <%= login_helper %>
+          <%= render "shared/application_nav" %>
 
-        <%= yield %>
+          <%= yield %>
 
-        <%= source_helper %>
-        <%= copyright %>
+          <%= source_helper %>
+
+          <%= render "shared/application_footer" %>
+        </div>
       </div>
     </div>
-  </div>
   </body>
 </html>
