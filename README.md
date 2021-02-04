@@ -1,9 +1,10 @@
-# Oray Kurt Portfolio Application
-http://oraykurt.herokuapp.com/ <br />
-It will be released on www.oraykurt.com soon
+# Oray Kurt Portfolio
+> This is a Ruby on Rails 5 application <br/>
+<hr/>
 
-> This is a Ruby on Rails 5 application
-
+[oraykurt.com](https://oraykurt.com/) <br/>
+Rails server is deployed on heroku.
+<hr/>
 ### Features
 
 - Real time chat engine for comments
