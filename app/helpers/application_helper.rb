@@ -16,4 +16,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: 'source-greeting')
     end
   end
+
+  def copyright
+    Oraykurt::Renderer.copyright
+  end
 end
