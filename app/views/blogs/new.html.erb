@@ -1,6 +1,4 @@
-<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
-
-<h1>New Blog</h1>
-
-<%= render 'form', blog: @blog %>
-
+<div class="col-sm-8 blog-main">
+  <h4 class="text-center">New Blog</h4>
+  <%= render 'form', blog: @blog %>
+</div>
