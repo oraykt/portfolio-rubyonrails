@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <%= link_to "Back", request.referer.present? ? request.referer : root_path %>
-<%= link_to "Create new Portfolio", new_portfolio_path %>
 
 
 <h1>Portfolio Items</h1>
+
+<%= link_to "Create new Portfolio", new_portfolio_path if logged_in?(:site_admin) %>
 
 <div>
   <ul>

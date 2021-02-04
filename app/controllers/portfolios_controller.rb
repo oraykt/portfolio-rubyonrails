@@ -1,6 +1,9 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy toggle_status]
   layout 'portfolio'
+  access all: [ :show, :index ],
+         user: { except: [ :new, :create, :update, :edit, :destroy ]},
+         site_admin: :all
 
   # GET /portfolios
   def index
