@@ -1,12 +1,8 @@
 <div class="masthead clearfix">
   <div class="inner">
     <h3 class="masthead-brand">Oray Kurt</h3>
-    <nav class="nav nav-masthead">
-      <%= link_to "Home", root_path, class: "nav-link" %>
-      <%= link_to "About", about_me_path, class: "nav-link" %>
-      <%= link_to "Contact", contact_path, class: "nav-link" %>
-      <%= link_to "My Portfolios", portfolios_path, class: "nav-link" %>
-      <%= link_to "My Blogs", blogs_path, class: "nav-link" %>
+    <nav class="nav nav-masthead app-nav">
+      <%= nav_helper 'span', 'nav-link' %>
       <%= login_helper "nav-link" %>
     </nav>
   </div>
