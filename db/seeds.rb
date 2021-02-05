@@ -31,7 +31,8 @@ puts '5 skills created!'
     subtitle: "#{portfolio_item + 1} subtitle",
     body: "#{portfolio_item + 1} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .",
     main_image: 'http://via.placeholder.com/600x400',
-    thumb_image: 'http://via.placeholder.com/356x280'
+    thumb_image: 'http://via.placeholder.com/356x280',
+    position: portfolio_item + 1
   )
 end
 
@@ -40,7 +41,8 @@ Portfolio.create!(
   subtitle: 'React',
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .',
   main_image: 'http://via.placeholder.com/600x400',
-  thumb_image: 'http://via.placeholder.com/356x280'
+  thumb_image: 'http://via.placeholder.com/356x280',
+  position: 8
 )
 
 Portfolio.create!(
@@ -48,7 +50,8 @@ Portfolio.create!(
   subtitle: 'Ruby on Rails',
   body: '#Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .',
   main_image: 'http://via.placeholder.com/600x400',
-  thumb_image: 'http://via.placeholder.com/356x280'
+  thumb_image: 'http://via.placeholder.com/356x280',
+  position: 9
 )
 
 puts '9 portfolio items created!'

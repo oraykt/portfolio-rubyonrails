@@ -7,7 +7,7 @@ class PortfoliosController < ApplicationController
 
   # GET /portfolios
   def index
-    @portfolios= Portfolio.all
+    @portfolios= Portfolio.by_position
     @page_title = 'Oray Kurt | Portfolios'
   end
 
