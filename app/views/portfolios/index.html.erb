@@ -1,14 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
-
-
-<h1>Portfolio Items</h1>
-
-<%= link_to "Create new Portfolio", new_portfolio_path if logged_in?(:site_admin) %>
-
-<div>
-  <ul>
-    <%= render @portfolio_items %>
-  </ul>
+<div class="album text-muted">
+  <div class="container">
+    <h2 class="text-center">My Portfolio</h2>
+    <div class="row">
+      <%= render @portfolios %>
+    </div>
+  </div>
 </div>

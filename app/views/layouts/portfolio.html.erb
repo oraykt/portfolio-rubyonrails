@@ -15,18 +15,11 @@
   </head>
 
   <body>
-    <%= render "shared/nav" %>
-
-    <%= login_helper %>
-    <hr />
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/portfolio_nav' %>
+    <%= render 'shared/portfolio_masthead' %>
 
     <%= yield %>
 
-    <%= source_helper %>
-
-    <%= copyright %>
+    <%= render 'shared/portfolio_footer' %>
   </body>
 </html>
