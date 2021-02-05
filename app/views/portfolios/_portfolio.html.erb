@@ -1,6 +1,7 @@
   <div class="card">
     <img src="<%= portfolio.thumb_image %>" alt="Card image cap">
     <p class="card-text">
-      <%= portfolio.title %>
+      <span><%= portfolio.title %></span>
+      <%= link_to "",portfolio_show_path(portfolio), class: 'stretched-link' %>
     </p>
   </div>
