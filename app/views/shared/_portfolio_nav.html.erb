@@ -2,16 +2,16 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-md-7 py-4">
-        <h4><%= link_to "About Me", about_me_path, class: "text-white" %></h4>
+        <h4 class="text-white">About Me</h4>
         <p class="text-muted">An ambitious software developer with good management skills, seeking a challenging position in the IT industry to pursue a highly rewarding career and healthy work environment where I can enhance my skills and knowledge along with organization objectives and growth.</p>
       </div>
       <div class="col-sm-4 offset-md-1 py-4">
-        <h4><%= link_to "My Blogs", blogs_path, class: "text-white" %></h4>
+        <h4 class="text-white">Explore</h4>
         <ul class="list-unstyled">
-          <li><a href="https://linkedin.com/in/rootkt" target="_blank" class="text-white">Get in touch <span class="social-link"><%= fa_icon "linkedin" %></span></a></li>
-          <li><a href="https://github.com/oraykt" target="_blank" class="text-white">Take a look at <span class="social-link"><%= fa_icon "github"%></span></a></li>
-          <li><a href="https://instagram.com/oraykt" target="_blank" class="text-white">Follow me on <span class="social-link"><%= fa_icon "instagram" %></span></a></li>
-          <li><a href="https://facebook.com/oraykurt" target="_blank" class="text-white">We are friend on <span class="social-link"><%= fa_icon "facebook" %></span></a></li>
+          <%= nav_helper 'li', 'text-white' %>
+          <li>
+            <%= login_helper 'text-white mr-2' %>
+          </li>
         </ul>
       </div>
     </div>
@@ -23,10 +23,8 @@
     <div class="justify-content-start">
       <%= link_to "Oray Kurt", root_path, class: 'navbar-brand' %>
     </div>
+
     <div class="ml-auto">
-      <%= login_helper "btn text-white" %>
-    </div>
-    <div class="justify-content-end ml-5">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
