@@ -14,6 +14,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
 
   validates_presence_of :nickname, :first_name, :last_name
+  validates :nickname, presence: true, uniqueness: { case_sensitive: false }
+  validates :email, presence: true, uniqueness: { case_sensitive: false }
 
   def full_name
     "#{first_name} #{last_name}"
