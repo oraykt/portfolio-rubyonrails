@@ -1,5 +1,11 @@
-<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
+<section>
+  <div class="d-flex justify-content-center">
+      <h1 class="text-center">Create a new Portfolio Item</h1>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="container">
+      <%= render 'form', portfolio: @portfolio %>
 
-<h1>Create a new Portfolio Item</h1>
-
-<%= render 'form', portfolio: @portfolio %>
+    </div>
+  </div>
+</section>
