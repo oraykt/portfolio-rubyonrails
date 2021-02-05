@@ -13,32 +13,14 @@
 
   <body>
     <%= render "shared/blog_nav" %>
-
-<!--start of blog header-->
-<div class="blog-header">
-  <div class="container">
-    <h1 class="blog-title">Oray Kurt's Diary</h1>
-    <p class="lead blog-description">You are on my notebook. I'm taking notes here</p>
-    <%= link_to "New Post", new_blog_path, class: "btn-sm btn-primary" if logged_in?(:site_admin) %>
-  </div>
-</div>
-<!--end of blog header-->
-<!--start of container and row-->
-
-<div class="container">
-  <div class="row">
-
-    <%= yield %>
-
-    <%= render 'shared/blog_sidebar' %>
-    <footer class="blog-footer w-100">
-      <p><%= copyright %></p>
-    </footer>
-  </div>
-</div>
-<!--end of container and row-->
-
-  <%= source_helper %>
-
+    <%= render 'shared/blog_masthead' %>
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+        <%= render 'shared/blog_sidebar' %>
+        <%= render 'shared/blog_footer' %>
+        <%= source_helper %>
+      </div>
+    </div>
   </body>
 </html>
