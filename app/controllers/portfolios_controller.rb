@@ -29,9 +29,6 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/new
   def new
     @portfolio = Portfolio.new
-    # hard coded style
-    # TODO refactor
-    3.times { @portfolio.technologies.build }
   end
 
   # POST /portfolios
@@ -81,7 +78,7 @@ class PortfoliosController < ApplicationController
       :body,
       :main_image,
       :thumb_image,
-      technologies_attributes: [:name]
+      technologies_attributes: [:id, :name, :_destroy]
     )
   end
 end
