@@ -1,4 +1,6 @@
-<%= link_to "Back", request.referer.present? ? request.referer : root_path %>
-<h1>Edit the Portfolio Item</h1>
 
-<%= render 'form', portfolio: @portfolio %>
+
+<div class="container">
+  <h3 class="d-flex justify-content-center">Edit the Portfolio Item</h3>
+  <%= render 'form', portfolio: @portfolio %>
+</div>

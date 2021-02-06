@@ -64,6 +64,18 @@ gem 'kaminari', '~> 1.2', '>= 1.2.1'
 # https://github.com/jquery-ui-rails/jquery-ui-rails
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 
+# https://github.com/carrierwaveuploader/carrierwave
+gem 'carrierwave', '~> 2.1'
+
+# https://github.com/minimagick/minimagick
+gem 'mini_magick', '~> 4.11'
+
+# https://github.com/sorentwo/carrierwave-aws
+gem 'carrierwave-aws', '~> 1.5'
+
+# https://github.com/bkeepers/dotenv
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

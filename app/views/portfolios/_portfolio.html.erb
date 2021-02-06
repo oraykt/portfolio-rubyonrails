@@ -1,5 +1,5 @@
   <div class="card" data-id="<%=portfolio.id %>">
-   <%= image_tag portfolio.thumb_image %>
+   <%= image_tag portfolio.thumb_image.to_s %>
     <p class="card-text">
       <span><%= portfolio.title %></span>
       <%= link_to "",portfolio_show_path(portfolio), class: 'stretched-link' %>
