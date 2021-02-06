@@ -35,46 +35,37 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
 # https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.4.0'
-
 # https://github.com/heartcombo/devise
 gem 'devise', '~> 4.7', '>= 4.7.3'
-
 # https://github.com/twbs/bootstrap/tree/v4.6.0
 # https://github.com/twbs/bootstrap-rubygem/blob/master/README.md
 gem 'bootstrap', '~> 4.6.0'
-
 # https://github.com/rails/jquery-rails
 gem 'jquery-rails'
-
 # https://github.com/oraykt/oraykurt
 gem 'oraykurt', '~> 0.1.1'
-
 # https://github.com/elorest/petergate
 gem 'petergate', '~> 2.0', '>= 2.0.1'
-
 # https://github.com/bokmann/font-awesome-rails
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.6'
-
 # https://github.com/kaminari/kaminari
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
-
 # https://github.com/jquery-ui-rails/jquery-ui-rails
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-
 # https://github.com/carrierwaveuploader/carrierwave
 gem 'carrierwave', '~> 2.1'
-
 # https://github.com/minimagick/minimagick
 gem 'mini_magick', '~> 4.11'
-
 # https://github.com/sorentwo/carrierwave-aws
 gem 'carrierwave-aws', '~> 1.5'
-
 # https://github.com/bkeepers/dotenv
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+# https://github.com/nathanvda/cocoon
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
+# https://github.com/RobinBrouwer/gritter
+gem 'gritter', '~> 1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
