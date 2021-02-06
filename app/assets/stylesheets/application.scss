@@ -191,3 +191,7 @@ body {
   background: image-url('background_video.jpg') no-repeat;
   background-size: cover;
 }
+
+#my-image {
+  filter: grayscale(70%);
+}
