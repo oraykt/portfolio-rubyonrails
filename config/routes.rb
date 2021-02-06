@@ -6,7 +6,9 @@ Rails.application.routes.draw do
                sign_out: 'logout',
                sign_up: 'register'
              }
-  resources :portfolios, except: [:show]
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
   # get 'custom-endpoint', to: 'controller#custom_action'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
