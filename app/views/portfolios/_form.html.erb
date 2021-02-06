@@ -1,4 +1,11 @@
 <%= form_for(portfolio) do |f| %>
+  <% if portfolio.errors.any? %>
+    <% portfolio.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error) %>
+    <% end %>
+  <% end %>
+
+
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
