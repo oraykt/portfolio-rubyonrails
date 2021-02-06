@@ -11,6 +11,16 @@ class PortfoliosController < ApplicationController
     @page_title = 'Oray Kurt | Portfolios'
   end
 
+  # PUT /portfolios/sort
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    # bypass the traditional type of process
+    head :ok
+  end
+
   # GET /portfolio/:id
   def show
     @page_title = @portfolio.title
