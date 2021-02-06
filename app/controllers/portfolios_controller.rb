@@ -1,19 +1,19 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy toggle_status]
   layout 'portfolio'
-  access all: [ :show, :index ],
-         user: { except: [ :new, :create, :update, :edit, :destroy ]},
+  access all: %i[show index],
+         user: { except: %i[new create update edit destroy sort] },
          site_admin: :all
 
   # GET /portfolios
   def index
-    @portfolios= Portfolio.by_position
+    @portfolios = Portfolio.by_position
     @page_title = 'Oray Kurt | Portfolios'
   end
 
   # PUT /portfolios/sort
   def sort
-    params[:order].each do |key, value|
+    params[:order].each do |_key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
     end
 
