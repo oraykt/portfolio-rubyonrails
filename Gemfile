@@ -66,6 +66,8 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # https://github.com/RobinBrouwer/gritter
 gem 'gritter', '~> 1.2'
+# https://github.com/sferik/twitter
+gem 'twitter', '~> 7.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
