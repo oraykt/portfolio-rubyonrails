@@ -13,11 +13,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable
 
-  validates_presence_of :nickname, :first_name, :last_name
   validates :nickname, presence: true, uniqueness: { case_sensitive: false }
   validates :email, presence: true, uniqueness: { case_sensitive: false }
 
-  def full_name
-    "#{first_name} #{last_name}"
-  end
+  has_many :comments, dependent: :destroy
 end

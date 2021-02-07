@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   devise_for :users,
              path: '',
              path_names: {
@@ -12,16 +13,17 @@ Rails.application.routes.draw do
   # get 'custom-endpoint', to: 'controller#custom_action'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
-
   resources :blogs do
     member do
       get :toggle_status
     end
   end
 
-  root to: 'pages#home'
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'
 
+  mount ActionCable.server => '/cable'
+
+  root to: 'pages#home'
 end

@@ -68,6 +68,8 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'gritter', '~> 1.2'
 # https://github.com/sferik/twitter
 gem 'twitter', '~> 7.0'
+# https://github.com/redis/redis-rb
+gem 'redis', '~> 4.2', '>= 4.2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

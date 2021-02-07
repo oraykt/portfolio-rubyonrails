@@ -1,0 +1,16 @@
+<div class="d-flex flex-row comment-row m-t-0">
+  <div class="p-2">
+    <%= gravatar_helper comment.user %>
+  </div>
+  <div class="comment-text w-100">
+    <h6 class="font-medium"><%= comment.user.nickname %></h6>
+    <span class="m-b-15 d-block"><%= comment.content %></span>
+    <div class="comment-footer">
+      <span class="text-muted float-right"><%= distance_of_time_in_words(comment.created_at, Time.now) %></span>
+<!--      <button type="button" class="btn btn-cyan btn-sm">Edit</button>-->
+<!--      <button type="button" class="btn btn-success btn-sm">Publish</button>-->
+<!--      <button type="button" class="btn btn-danger btn-sm">Delete</button>-->
+    </div>
+  </div>
+</div>
+<hr>
