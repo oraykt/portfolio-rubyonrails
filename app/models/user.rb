@@ -17,6 +17,8 @@ class User < ApplicationRecord
   validates :nickname, presence: true, uniqueness: { case_sensitive: false }
   validates :email, presence: true, uniqueness: { case_sensitive: false }
 
+  has_many :comments, dependent: :destroy
+
   def full_name
     "#{first_name} #{last_name}"
   end
