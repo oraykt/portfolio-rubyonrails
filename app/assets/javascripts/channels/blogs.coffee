@@ -15,8 +15,7 @@ jQuery(document).on 'turbolinks:load', ->
     $this = $(this)
     textarea = $this.find('#comment_content')
     if $.trim(textarea.val()).length > 1
-      App.global_chat.send_comment textarea.val(),
-        comments.data('blog-id')
+      App.global_chat.send_comment textarea.val(), comments.data('blog-id')
       textarea.val('')
     e.preventDefault()
     return false
