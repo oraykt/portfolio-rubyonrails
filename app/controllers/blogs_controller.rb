@@ -14,6 +14,8 @@ class BlogsController < ApplicationController
 
   # GET /blogs/:id
   def show
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
     @page_title = @blog.title
   end
 
