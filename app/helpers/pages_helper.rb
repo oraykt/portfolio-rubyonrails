@@ -1,6 +1,6 @@
 module PagesHelper
   def twitter_link_parser tweet
-    regex = %r{
+    link_regex = %r{
       \b
       (
         (?: [a-z][\w-]+:
@@ -18,8 +18,16 @@ module PagesHelper
       )
     }ix
 
-    tweet.gsub(regex) do |url|
+    tweet.gsub(link_regex) do |url|
       "<a href='#{url}' target='_blank'>#{url}</a>"
     end.html_safe
+
+    # username = '/^[A-Za-z0-9_]{1,15}$/'
+    #
+    # tweet.gsub(username) do | username |
+    #   "<a href='http://twitter.com/#{username}'>@#{username}</a>"
+    # end
+    # byebug
+    # tweet.html_safe
   end
 end
