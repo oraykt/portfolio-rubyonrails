@@ -1,14 +1,20 @@
+# frozen_string_literal: true
+
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
   layout 'blog'
-  access all: [ :show, :index ],
-         user: { except: [ :new, :create, :update, :edit, :destroy, :toggle_status ]},
+  access all: %i[show index],
+         user: { except: %i[new create update edit destroy toggle_status] },
          site_admin: :all
-
 
   # GET /blogs
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = if logged_in?(:site_admin)
+               Blog.recent.page(params[:page]).per(5)
+             else
+               Blog.published.recent.page(params[:page]).per(5)
+             end
+
     @page_title = 'Oray Kurt | Blogs'
   end
 
