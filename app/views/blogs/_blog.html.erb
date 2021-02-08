@@ -1,6 +1,9 @@
 <div class="blog-post">
   <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-  <p class="blog-post-meta"><%= distance_of_time_in_words(blog.created_at, Time.now) %> ago. </p>
+  <p class="blog-post-meta">
+    <label class="text-info"><%= blog.topic.title %> </label> ||
+    <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago.
+  </p>
   <% if logged_in?(:site_admin) %>
     <p class="blog-post-meta">
       <div class="d-flex">
@@ -10,6 +13,6 @@
       </div>
     </p>
   <% end %>
-  <p><%= blog.body %></p>
+  <p class="text-justify"><%= blog.body %></p>
 
 </div>
