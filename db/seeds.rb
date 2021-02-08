@@ -1,20 +1,15 @@
 Skill.create!(
-  title: "React",
+  title: "React - Vue",
   percent_utilized: 60
 )
 
 Skill.create!(
-  title: "Vue",
-  percent_utilized: 25
-)
-
-Skill.create!(
   title: "Java, Spring Framework",
-  percent_utilized: 65
+  percent_utilized: 40
 )
 
 Skill.create!(
-  title: "Javascript ES6",
+  title: "Javascript ES6, Node-Express",
   percent_utilized: 90
 )
 
