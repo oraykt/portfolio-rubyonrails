@@ -1,12 +1,27 @@
 <div class="container">
-  <h2>About Me</h2>
-  <hr>
+
   <div class="row">
     <div class="col-md-4">
       <%= image_tag "profile.png", width: 250, alt: "about-me", class: 'rounded-circle', id: "my-image" %>
+      <div class="skills">
+        <% @skills.each do |skill| %>
+          <div class="container mb-1">
+          <h6 class="text-left"><%= skill.title %></h6>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning"
+                 role="progressbar"
+                 aria-valuenow="<%= skill.percent_utilized %>"
+                 aria-valuemax="100"
+                 style="width: <%= skill.percent_utilized %>%"
+            >
+            </div>
+          </div>
+          </div>
+        <% end %>
+      </div>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-8 about-me p-5 mt-2">
       <p class="text-justify">
         I am a self-motivated and ambitious software developer who enjoys connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have strong technical skills in web architecture and an academic background in engineering.
         My passion makes me an astute problem-solver capable of prioritizing and managing complex projects with proficiency.
@@ -16,7 +31,7 @@
         In my previous role, I exercised skills in communication and teamwork. As a team player, I feel confident and effective in collaborative work. I enjoy brainstorming to achieve a common goal.
       </p>
       <p class="text-justify">
-        I am open-minded on new developments in my field.
+        I am open-minded to new developments in my field.
       </p>
     </div>
   </div>

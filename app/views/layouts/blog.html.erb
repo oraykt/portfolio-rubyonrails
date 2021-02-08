@@ -17,14 +17,13 @@
 
   <body>
     <%= alerts %>
-    <%= render "shared/blog_nav" %>
+    <%= render "shared/portfolio_nav" %>
     <%= render 'shared/blog_masthead' %>
     <div class="container">
       <div class="row">
         <%= yield %>
         <%= render 'shared/blog_sidebar' %>
         <%= render 'shared/blog_footer' %>
-        <%= source_helper %>
       </div>
     </div>
   </body>
