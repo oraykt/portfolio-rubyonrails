@@ -1,7 +1,7 @@
 <div class="album text-muted">
   <div class="container">
     <%= source_helper('alert alert-primary') %>
-   <%= link_to "+", new_portfolio_path, class: "btn-sm btn-success" if logged_in?(:site_admin) %>
+    <%= link_to "+", new_portfolio_path, class: "btn-sm btn-success" if logged_in?(:site_admin) %>
     <h2 class="text-center">My Portfolio</h2>
     <div class="row <%= 'sortable' if logged_in?(:site_admin) %>">
       <%= render @portfolios %>
