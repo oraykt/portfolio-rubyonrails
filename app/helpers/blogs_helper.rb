@@ -23,4 +23,10 @@ module BlogsHelper
     markdown_to_html.render(text).html_safe
   end
 
+  def toggle_status_button blog
+    button_class = 'btn-sm btn-'
+    button_class << (blog.published? ? 'success' : 'warning')
+    button_class
+  end
+
 end
