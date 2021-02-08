@@ -1,10 +1,7 @@
 <div class="col-sm-8 blog-main">
   <h2 class="d-flex justify-content-center"><%= @blog.title %></h2>
-  <div class="d-flex">
-    <%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'btn-sm btn-' + (@blog.status == "published" ? "success" : "warning") %>
-    <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog), class: 'btn-sm btn-secondary ml-auto'%>
-    <%= link_to fa_icon('trash'), @blog , method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-danger ml-2'%>
-  </div>
+  <%= render partial: 'blogs/admin_actions', locals: { blog: @blog } %>
+
   <div class="card mt-3">
     <div class="card-header">
       <strong>Topic: </strong>
