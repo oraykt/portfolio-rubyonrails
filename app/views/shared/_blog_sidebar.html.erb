@@ -1,5 +1,9 @@
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
 
+  <%= link_to "New Post", new_blog_path, class: "btn-sm btn-primary" if logged_in?(:site_admin) %>
+
+
+
   <%= source_helper('alert alert-primary') %>
 
   <div class="sidebar-module sidebar-module-inset">
