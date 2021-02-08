@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :topics, only: %i[index show]
   resources :comments
   devise_for :users,
              path: '',

@@ -7,7 +7,8 @@
   </div>
   <div class="card mt-3">
     <div class="card-header">
-      <strong>Topic: </strong><em><%= @blog.topic.title %></em>
+      <strong>Topic: </strong>
+      <em><%= link_to "#{@blog.topic.title}", topic_path(@blog.topic)  %></em>
     </div>
     <div class="card-body text-justify"><%= @blog.body %></div>
   </div>

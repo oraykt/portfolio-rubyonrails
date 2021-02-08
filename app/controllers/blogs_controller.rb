@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  before_action :set_sidebar_topics, except: %i[update create destroy toggle_status]
   layout 'blog'
   access all: %i[show index],
          user: { except: %i[new create update edit destroy toggle_status] },
@@ -89,5 +90,9 @@ class BlogsController < ApplicationController
       :body,
       :topic_id
     )
+  end
+
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
   end
 end
