@@ -24,3 +24,23 @@ Skill.create!(
 )
 
 puts "About skills created"
+
+Topic.create!(
+  title: "Technology"
+)
+
+Topic.create!(
+  title: "Life"
+)
+
+Topic.create!(
+  title: "Sport"
+)
+
+Topic.create!(
+  title: "Game"
+)
+
+Topic.create!(
+  title: "Crypto"
+)
