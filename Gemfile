@@ -70,6 +70,10 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 7.0'
 # https://github.com/redis/redis-rb
 gem 'redis', '~> 4.2', '>= 4.2.5'
+# https://github.com/vmg/redcarpet
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+# https://github.com/rubychan/coderay
+gem 'coderay', '~> 1.1', '>= 1.1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
