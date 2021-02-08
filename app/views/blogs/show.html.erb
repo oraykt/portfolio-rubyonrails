@@ -1,13 +1,16 @@
 <div class="col-sm-8 blog-main">
-  <h2><%= @blog.title %></h2>
+  <h2 class="d-flex justify-content-center"><%= @blog.title %></h2>
   <div class="d-flex">
     <%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'btn-sm btn-' + (@blog.status == "published" ? "success" : "warning") %>
     <%= link_to 'Edit', edit_blog_path(@blog), class: 'btn-sm btn-secondary ml-2'%>
     <%= link_to 'Destroy', @blog , method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn-danger ml-auto'%>
   </div>
-  <p>
-    <%= @blog.body %>
-  </p>
+  <div class="card mt-3">
+    <div class="card-header">
+      <strong>Topic: </strong><em><%= @blog.topic.title %></em>
+    </div>
+    <div class="card-body text-justify"><%= @blog.body %></div>
+  </div>
   <hr>
   <% unless current_user.is_a? GuestUser %>
     <%= render 'comments/form' %>

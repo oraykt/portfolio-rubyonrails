@@ -12,8 +12,8 @@ class BlogsController < ApplicationController
              else
                Blog.published.recent.page(params[:page]).per(5)
              end
-
     @page_title = 'Oray Kurt | Blogs'
+    @seo_keywords = 'Oray Kurt Blogs Portfolio'
   end
 
   # GET /blogs/:id
@@ -86,7 +86,8 @@ class BlogsController < ApplicationController
   def blog_params
     params.require(:blog).permit(
       :title,
-      :body
+      :body,
+      :topic_id
     )
   end
 end
