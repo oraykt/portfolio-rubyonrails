@@ -1,9 +1,9 @@
 ready = ->
   new Typed '.typed-home',
     strings: [
-      'An ambitious software developer with good management skills, seeking a challenging position in the IT industry to pursue a highly rewarding career and healthy work environment where I can enhance my skills and knowledge along with organization objectives and growth.'
+      'Web Application Developer'
     ]
-    typeSpeed: 35
+    typeSpeed: 120
   return
 
 $(document).ready ready
