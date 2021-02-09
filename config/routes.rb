@@ -26,5 +26,6 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
+  get '/*404', to: 'pages#not_found'
   root to: 'pages#home'
 end

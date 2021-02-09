@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   # GET /
-  def home
-  end
+  def home; end
 
   # GET /about-me
   def about
@@ -17,4 +16,6 @@ class PagesController < ApplicationController
   def tech_news
     @tweets = SocialTool.twitter_search
   end
+
+  def not_found; end
 end
