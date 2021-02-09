@@ -41,11 +41,11 @@ module ApplicationHelper
       },
       {
         url: portfolios_path,
-        title: 'Portfolios'
+        title: 'Portfolio'
       },
       {
         url: blogs_path,
-        title: 'Blogs'
+        title: 'Blog'
       }
     ]
   end
